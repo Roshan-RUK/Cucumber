@@ -14,6 +14,7 @@ Given I landed on Ecommerce page
     And CHeckout <productName> and submit the order
     Then "THANKYOU FOR THE ORDER." message is displayed on confirmationpage
 
+
     Examples: 
       | name  								| password 				| productName  |
       | rahulshetty@gmail.com |     IamKing@000 | ZARA COAT 3	 |
