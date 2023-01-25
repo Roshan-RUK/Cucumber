@@ -6,7 +6,7 @@ Feature: Purchase the order for E-commerce website
 Background:
 Given I landed on Ecommerce page
 
-  @tag2
+  @OrderDataTransfer
   Scenario Outline: Positive Test of submitting the order
   
     Given Logged in with username <name> and Password <password>
