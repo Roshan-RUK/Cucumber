@@ -6,13 +6,14 @@ Feature: Purchase the order for E-commerce website
 Background:
 Given I landed on Ecommerce page
 
-  @tag2
+  @OrderDataTransfer
   Scenario Outline: Positive Test of submitting the order
   
     Given Logged in with username <name> and Password <password>
     When I add product <productName> from cart
     And CHeckout <productName> and submit the order
     Then "THANKYOU FOR THE ORDER." message is displayed on confirmationpage
+
 
     Examples: 
       | name  								| password 				| productName  |
