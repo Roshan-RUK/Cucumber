@@ -18,4 +18,12 @@ Given I landed on Ecommerce page
     Examples: 
       | name  								| password 				| productName  |
       | rahulshetty@gmail.com |     IamKing@000 | ZARA COAT 3	 |
+      
+   @OrderDataDirectTransfer
+   Scenario: Test data submit using scenario
+   
+   Given I Logged in with username "rahulshetty@gmail.com" and Password "IamKing@000"
+   When Add product "ZARA COAT 3" from cart
+   And Checkout "ZARA COAT 3" to submit the order
+   Then "THANKYOU FOR THE ORDER." message displayed on confirmationpage
    
