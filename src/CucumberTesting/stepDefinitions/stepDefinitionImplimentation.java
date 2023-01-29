@@ -22,8 +22,20 @@ System.out.println("Inside Background, first execution");
 		System.out.println("The username is "+username+"Password is"+password);
 	}
 	
+	@Given("I Logged in with username {string} and Password {string}")
+	public void Logged_in_with_username_Password(String username,String password)
+	{
+		System.out.println("The username is "+username+"Password is"+password);
+	}
+	
 	@When("^I add product (.+) from cart$")
 	public void I_add_product_from_cart(String productName)
+	{
+		System.out.println("The product name is"+productName);
+	}
+	
+	@When("Add product {string} from cart")
+	public void I_add_product_fromcart(String productName)
 	{
 		System.out.println("The product name is"+productName);
 	}
@@ -34,8 +46,20 @@ System.out.println("Inside Background, first execution");
 		System.out.println("The product name is"+productName);
 	}
 	
+	@And("Checkout {string} to submit the order")
+	public void CHeckout_submit_the_order(String productName)
+	{
+		System.out.println("The product name is"+productName);
+	}
+	
 	@Then("{string} message is displayed on confirmationpage")
 	public void message_is_displayed_on_confirmationpage(String message)
+	{
+		System.out.println("the Message is"+message);
+	}
+	
+	@Then("{string} message displayed on confirmationpage")
+	public void message_displayed_on_confirmationpage(String message)
 	{
 		System.out.println("the Message is"+message);
 	}
